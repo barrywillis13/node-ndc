@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><soap:Envelope xmlns:sita="http://www.sita.aero/PTS/fare/2005/12/FlightShopRQ" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ota="http: / www.opentravel.org / OTA /">
+<soap:Body>
+<sita:SITA_AirfareFlightShopRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ota="http://www.opentravel.org/OTA/2003/05" DirectFlightsOnly="false" EchoToken="SITALABDEMO" Version="0.001">
+<POS xmlns:ota="http: / www.opentravel.org / OTA /">
+<Source AgentDutyCode="52" AgentSine="9947/*****" AirlineVendorID="AI" AirportCode="" ISOCountry="AI" PseudoCityCode="WWW101"/>
+</POS>
+<ota:OTA_AirLowFareSearchRQ Version="0.001" xmlns:ota="http: / www.opentravel.org / OTA /">
+<ota:POS>
+<ota:Source AirlineVendorID="AI" AirportCode="DEL" PseudoCityCode="WWW101"/>
+<ota:Source>
+<RequestorID Type="7" ID="V1T9s-uRj4K-30mZp-HA5g2" ID_Context="Airfare"/>
+</ota:Source>
+<ota:Source>
+<ota:RequestorID ID="MOBI99" ID_Context="DepartmentCode" Type="13"/>
+</ota:Source>
+</ota:POS>
+<ota:OriginDestinationInformation RPH="01">
+<ota:DepartureDateTime>2017-03-17</ota:DepartureDateTime>
+<ota:OriginLocation LocationCode="DEL"/>
+<ota:DestinationLocation LocationCode="FRA"/>
+</ota:OriginDestinationInformation>
+<ota:TravelPreferences>
+<ota:CabinPref Cabin="Economy/coach discounted" Preference="Only"/>
+</ota:TravelPreferences>
+<ota:TravelerInfoSummary>
+<ota:AirTravelerAvail>
+<ota:PassengerTypeQuantity Code="ADT" Quantity="1"/>
+</ota:AirTravelerAvail>
+<ota:PriceRequestInformation PricingSource="Both">
+<ota:NegotiatedFareCode Code="MOBI"/>
+</ota:PriceRequestInformation>
+</ota:TravelerInfoSummary>
+</ota:OTA_AirLowFareSearchRQ>
+</sita:SITA_AirfareFlightShopRQ>
+</soap:Body>
+</soap:Envelope>

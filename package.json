@@ -1,0 +1,22 @@
+{
+  "name": "node_ndc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "7.4.0"
+  },
+  "author": "Barry Willis",
+  "license": "ISC",
+  "dependencies": {
+    "argv": "0.0.2",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "request": "^2.79.0",
+    "yargs": "^6.6.0"
+  }
+}

@@ -1,0 +1,24 @@
+<FareRulesRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="15.2" xsi:schemaLocation="http://www.iata.org/IATA/EDIST NDC_FareRulesRQ.xsd">
+	<Document/>
+	<Party>
+		<Sender>
+			<AgentUserSender>
+				<AgentUserID>a</AgentUserID>
+			</AgentUserSender>
+		</Sender>
+	</Party>
+	<Query>
+		<Departure>
+			<AirportCode>DEL</AirportCode>
+			<Date>2017-03-13</Date>
+			<Time>05:30</Time>
+		</Departure>
+		<Arrival>
+			<AirportCode>FRA</AirportCode>
+		</Arrival>
+		<FareBasisCode>
+			<Code>a</Code>
+		</FareBasisCode>
+		<AirlineID>AI</AirlineID>
+	</Query>
+</FareRulesRQ>
