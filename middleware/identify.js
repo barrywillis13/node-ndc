@@ -2,11 +2,13 @@
 var identify = (req, res, next) => {
   var reqString = req.body.toString();
   var index = 0
+  
   if (reqString.startsWith('<?xml version="1.0" encoding="UTF-8"?>')){
     index = 40
   } else if (reqString.startsWith('<?xml version="1.0" encoding="UTF-16"?>')){
     index = 41
   }
+
   if(reqString.startsWith('<AirShoppingRQ', index)){
       req.id = 'shop';
   } else if(reqString.startsWith('<AirDocCancelRQ', index)){
