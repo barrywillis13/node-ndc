@@ -6,10 +6,10 @@ var execute = (xml, id, callback) => {
   transformXML(xml, `${id}RQ`, (result) => {
     //console.log('request transformed, calling api...')
     callApi(result, (response) => {
-      callback(response)
+      //callback(response)
       //console.log('response collected, transforming response...')
       transformXML(response, `${id}RS`, (output) => {
-        //callback(output)
+        callback(output)
       })
     })
   })

@@ -2,20 +2,19 @@
 var identify = (req, res, next) => {
   var reqString = req.body.toString();
   var index = 0
-  
+
   if (reqString.startsWith('<?xml version="1.0" encoding="UTF-8"?>')){
     index = 40
   } else if (reqString.startsWith('<?xml version="1.0" encoding="UTF-16"?>')){
     index = 41
   }
-
-  if(reqString.startsWith('<AirShoppingRQ', index)){
+  if(reqString.startsWith('<AirShoppingRQ', reqString.indexOf('<AirShoppingRQ'))){
       req.id = 'shop';
   } else if(reqString.startsWith('<AirDocCancelRQ', index)){
       req.id = 'cancelTicket';
   } else if(reqString.startsWith('<AirDocIssueRQ', index)){
       req.id = 'ticket';
-  } else if(reqString.startsWith('<FareRulesRQ', index)){
+  } else if(reqString.startsWith('<FareRulesRQ', reqString.indexOf('<FareRulesRQ'))){
       req.id = 'rules';
   } else if(reqString.startsWith('<FlightPriceRQ', index)){
       req.id = 'airfare';

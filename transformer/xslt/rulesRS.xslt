@@ -2,7 +2,8 @@
 
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-	xmlns:env="http://schemas.xmlsoap.org/soap/envelope/">
+	xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:ota="http://www.opentravel.org/OTA/2003/05">
 
 	<xsl:template match="/">
 		<xsl:choose>
@@ -16,6 +17,13 @@
 						</env:Fault>
 					</env:Body>
 				</env:Envelope>
+			</xsl:when>
+			<xsl:when test="//ota:Error">
+			<FareRulesRS>
+				<Errors>
+            <Error Type="{//@Type}"><xsl:value-of select="."/></Error>
+        </Errors>
+			</FareRulesRS>
 			</xsl:when>
 			<xsl:otherwise>
 				<FareRulesRS xmlns:n1="http://www.iata.org/IATA/EDIST"
