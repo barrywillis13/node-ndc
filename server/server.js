@@ -27,7 +27,7 @@ app.post('/', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.send('This server does not support GET requests, so it doesnt, so it is!')
+  res.status(404).send('This server does not support GET requests, so it doesnt, so it is!')
 })
 
 ////////////////////////////////////////////////////////////////////////////////
