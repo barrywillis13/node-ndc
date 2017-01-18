@@ -47,39 +47,9 @@ var transformXML = (xml, id) => {
         readAndWipe(__dirname + '/output.xml').then((data) => {
           resolve(data)
         })
-        // readAndWipe(__dirname + '/output.xml', (data) => {
-        //   callback(data)
-        // })
     });
   })
 }
-
-//transform using xslt4node module with callback
-// var transformXML = (xml, id, callback) => {
-//   var config = {
-//       xsltPath: `${__dirname}/xslt/${id}.xslt`,
-//       source: xml,
-//       result: `${__dirname}/output.xml`,
-//       params: {
-//           discount: '2014/08/01'
-//       },
-//       props: {
-//           indent: 'yes'
-//       }
-//   };
-//   xslt.transform(config, (err) => {
-//       if (err) {
-//         console.log(err);
-//       }
-//
-//       readAndWipe(__dirname + '/output.xml').then((data) => {
-//         callback(data)
-//       })
-//       // readAndWipe(__dirname + '/output.xml', (data) => {
-//       //   callback(data)
-//       // })
-//   });
-// }
 
 // var readAndWipe = (filePath, callback) => {
 //   var data;
