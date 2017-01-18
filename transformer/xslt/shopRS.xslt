@@ -178,8 +178,8 @@
 													</AssociatedTraveler>
 												</Associations>
 											</RequestedDate>
-											<!-- <FareDetail> <FareComponent> <FareBasis> <FareBasisCode> 
-												<Code> <xsl:value-of select=".//sita:FareBasisCode[1]" /> </Code> </FareBasisCode> 
+											<!-- <FareDetail> <FareComponent> <FareBasis> <FareBasisCode>
+												<Code> <xsl:value-of select=".//sita:FareBasisCode[1]" /> </Code> </FareBasisCode>
 												</FareBasis> </FareComponent> </FareDetail> -->
 										</OfferPrice>
 									</xsl:for-each>
@@ -336,9 +336,9 @@
 							<xsl:value-of select=".//sita:Equipment/@AirEquipType" />
 						</Name>
 					</Equipment>
-					<!-- <FlightDetail> <FlightDuration> <Value> <xsl:call-template name="durationTemp"> 
-						<xsl:with-param name="beginning" select=".//@DepartureDateTime" /> <xsl:with-param 
-						name="end" select=".//@ArrivalDateTime" /> </xsl:call-template> </Value> 
+					<!-- <FlightDetail> <FlightDuration> <Value> <xsl:call-template name="durationTemp">
+						<xsl:with-param name="beginning" select=".//@DepartureDateTime" /> <xsl:with-param
+						name="end" select=".//@ArrivalDateTime" /> </xsl:call-template> </Value>
 						</FlightDuration> </FlightDetail> -->
 				</FlightSegment>
 			</xsl:for-each>
