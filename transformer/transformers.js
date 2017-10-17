@@ -19,7 +19,7 @@ var execute = (xml, id, callback) => {
   transformXML(xml, `${id}RQ`).then((result) => {
     callApi(result, (response) => {
       transformXML(response, `${id}RS`).then((output) => {
-        callback(result)
+        callback(response)
       })
     })
   })
